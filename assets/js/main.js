@@ -1,6 +1,10 @@
 // dom references
 const form = document.querySelector("#form");
 const input = document.querySelector("#input_field");
+const newsFeed = document.querySelector(".news-feed");
+
+// get the input field in focuswhen the page loads
+input.focus();
 
 // event listener for the form
 form.addEventListener("submit", getNews);
@@ -15,7 +19,7 @@ function getNews(e) {
   e.preventDefault();
 
   const query = `?q=${input.value}`;
-  const pageSize = 5;
+  const pageSize = 10;
   const page = 1;
 
   // request endpoint
@@ -47,13 +51,12 @@ function getNews(e) {
         renderNews(newsArray);
       });
   } else {
-    alert("Please type something!");
+    newsFeed.innerHTML = `<h2>Please type something</h2>`;
   }
 }
 
 // renderNews()
 function renderNews(arr) {
-  const newsFeed = document.querySelector(".news-feed");
   // clear the div in case previous search results
   newsFeed.innerHTML = "";
   // saving each news in an array
