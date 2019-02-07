@@ -40,7 +40,7 @@ function getNews(e) {
             return response.json();
           }
         },
-        // in case of netqork errors
+        // in case of network errors
         networkError => {
           console.log(networkError.message);
         }

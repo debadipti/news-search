@@ -4,7 +4,7 @@
   "description": "A news searching app using \"https://newsapi.org/v2/\" api to fetch latest news related to what user searches.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "node-sass": "node-sass -w assets/scss/ -o assets/css/ --recursive"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/debadipti/news-search/issues"
   },
-  "homepage": "https://github.com/debadipti/news-search#readme"
+  "homepage": "https://github.com/debadipti/news-search#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
 }
