@@ -42,7 +42,7 @@ header {
           outline: none; }
         header .wrapper .form-wrapper #form #input_field::placeholder {
           color: #ccc; }
-      header .wrapper .form-wrapper #form button[type="submit"] {
+      header .wrapper .form-wrapper #form button#submit {
         all: unset;
         background: #51ca39;
         border: 1px solid #26c207;
