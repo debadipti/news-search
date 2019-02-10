@@ -64,7 +64,7 @@ function countDown() {
   // grab the notification span in the DOM
   const notificationBlock = document.querySelector(".notification");
   // start the count
-  let count = 6;
+  let count = 61;
   // html content
   notificationBlock.innerHTML = `Auto-refresh in <span id="countdown"></span> seconds`;
   // every second substract 1 from the count
@@ -95,7 +95,7 @@ function countDown() {
       getNews();
       // console log everytime the news refreshes
       console.log("News got refreshed");
-    }, 6000);
+    }, 61000);
   }
 }
 
