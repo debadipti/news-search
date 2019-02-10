@@ -51,18 +51,52 @@ function getNews() {
         // rendernews function to render the news in the DOM
         renderNews(newsArray);
 
-        refresh();
+        // call the countdown which contains refresh function
+        countDown();
       });
   } else {
+    // warn the user about invalid input
     newsFeed.innerHTML = `<h2>Please type something</h2>`;
   }
 }
 
-function refresh() {
-  setTimeout(() => {
-    getNews();
-    console.log("loaded");
-  }, 5000);
+function countDown() {
+  // grab the notification span in the DOM
+  const notificationBlock = document.querySelector(".notification");
+  // start the count
+  let count = 6;
+  // html content
+  notificationBlock.innerHTML = `Auto-refresh in <span id="countdown"></span> seconds`;
+  // every second substract 1 from the count
+  intervalId = setInterval(() => {
+    count--;
+    // grab the countdown span
+    const countdown = document.querySelector("#countdown");
+    // change inner text to be current count
+    countdown.textContent = count;
+    // display the countdown in the DOM
+    notificationBlock.style.visibility = "visible";
+    if (count <= 0) {
+      // hide the notification
+      notificationBlock.innerHTML = `Refreshing again...`;
+      //clear the interval after news got refreshed
+      clearInterval(intervalId);
+      // console a message
+      console.log("Timer Reset");
+    }
+  }, 1000);
+
+  // refresh news function
+  refresh();
+
+  function refresh() {
+    setTimeout(() => {
+      // call the getNews function that actually refreses the news
+      getNews();
+      // console log everytime the news refreshes
+      console.log("News got refreshed");
+    }, 6000);
+  }
 }
 
 // renderNews()
