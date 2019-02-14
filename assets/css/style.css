@@ -49,12 +49,20 @@ header {
         padding: 6px 14px 2px;
         color: white;
         cursor: pointer; }
-  header .wrapper .notification {
+  header .wrapper #refresh {
     position: absolute;
+    visibility: hidden;
+    cursor: pointer;
     bottom: 0.6rem;
     right: 1rem;
     font-size: 0.9rem;
-    visibility: hidden; }
+    padding: 0.2rem 0.6rem;
+    color: #222;
+    font-size: 0.8rem;
+    border: 2px solid #26c207;
+    border-radius: 3px; }
+    header .wrapper #refresh:hover {
+      background-color: #aafb9a; }
 
 main {
   margin: 2rem 0; }
