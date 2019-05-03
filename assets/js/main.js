@@ -49,6 +49,7 @@ function getNews() {
       )
       .then(jsonResponse => {
         const newsArray = jsonResponse.articles;
+        console.log(newsArray);
         // loaded console
         console.log("News Loaded");
         // rendernews function to render the news in the DOM
