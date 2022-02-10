@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/debadipti/news-search#readme",
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
